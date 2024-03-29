@@ -16,10 +16,21 @@ class Program
     void Start()
     {
         HangmanGame hangman = new HangmanGame();
-        hangman.Init("Albequrque");
+        List<string> words = new List<string>();
+        words = ListOfWords();
+        hangman.Init(SelectWord(words));
+        DisplayWord(hangman.guessedWord);
+        bool win = PlayHangman(hangman);
+        if (win)
+        {
+            Console.WriteLine("You guessed the word!");
+        }
+        else
+        {
+            Console.WriteLine($"Too bad,you did not guess the word ({hangman.secretWord})");
+        }
 
-        Console.WriteLine($"The secret word is: {hangman.secretWord}");
-        Console.WriteLine($"The guessed word is: {hangman.guessedWord}");
+        
 
 
     }
@@ -37,28 +48,53 @@ class Program
         return wordList;
     }
 
+    string SelectWord(List<string> words)
+    {
+        Random rand = new Random();
+        return words[rand.Next(0, 20)];
+    }
+
+   
+        
 
     bool PlayHangman(HangmanGame hangman)
     {
+
+       
         List<char> enteredLetters = new List<char>();
+        bool guessedword = hangman.isGuessed();
+        int nrOfAttempts = 8;
 
-
-        DisplayWord(hangman.GetGuessedWord());
-
-        DisplayLetters(enteredLetters);
-
-
-        char letter = ReadLetter(enteredLetters);
-        enteredLetters.Add(letter);
-
-
-        if (hangman.ContainsLetter(letter))
+        while(nrOfAttempts > 0 && guessedword == false)
         {
-            hangman.ProcessLetter(letter);
+
+            char letter = ReadLetter(enteredLetters);
+            enteredLetters.Add(letter);
+
+            Console.Write("Entered Letters: ");
+            DisplayLetters(enteredLetters);
+
+            if (hangman.ContainsLetter(letter))
+            {
+                hangman.ProcessLetter(letter);
+
+            }
+
+            else
+            
+                nrOfAttempts--;
+                Console.WriteLine($"Attempts left:{nrOfAttempts} ");
+            
+
+            DisplayWord(hangman.guessedWord);
+
+            if (hangman.isGuessed())
+            {
+                return true ;
+            }
+           
         }
-
-        return true;
-
+        return false;
     }
 
     void DisplayWord(string word)
@@ -91,7 +127,8 @@ class Program
             Console.WriteLine("Enter a letter: ");
             letter = Console.ReadKey().KeyChar;
             Console.WriteLine();
-        } while (blacklistLetters.Contains(letter));
+        }
+        while (blacklistLetters.Contains(letter));
 
         return letter;
     }

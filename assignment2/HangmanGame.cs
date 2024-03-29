@@ -20,13 +20,22 @@ namespace assignment2
 
 		public bool ContainsLetter(char letter)
 		{
-			return secretWord.Contains(letter);
+			foreach(char c in secretWord)
+			{
+				if (c == letter)
+				{
+					return true;
+				}
+
+			}
+			return false;
 		}
+
 
 		public void ProcessLetter(char letter)
 		{
 			string placeholderWord = null;
-			for (int i = 0; i < secretWord.Length; i++)
+			for (int i = 0; i < secretWord.Length - 1 ; i++)
 			{
 				if (secretWord[i] == letter)
 				{
@@ -35,9 +44,22 @@ namespace assignment2
 
 				else
 				{
-					secretWord += guessedWord[i];
+					placeholderWord += guessedWord[i];
 				}
 			}
+
+			 guessedWord = placeholderWord;
+		}
+
+		public bool isGuessed()
+		{
+			if(secretWord == guessedWord)
+			{
+				return true;
+			}
+			return false;
+
+
 		}
 
 	}

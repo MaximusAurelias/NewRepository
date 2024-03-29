@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/ray/Projects/Programming1.2-Week3/assignment2/assignment2.csproj",
+      "projectUniqueName": "/Users/ray/Desktop/clone/NewRepository/assignment2/assignment2.csproj",
       "projectName": "assignment2",
-      "projectPath": "/Users/ray/Projects/Programming1.2-Week3/assignment2/assignment2.csproj",
+      "projectPath": "/Users/ray/Desktop/clone/NewRepository/assignment2/assignment2.csproj",
       "packagesPath": "/Users/ray/.nuget/packages/",
-      "outputPath": "/Users/ray/Projects/Programming1.2-Week3/assignment2/obj/",
+      "outputPath": "/Users/ray/Desktop/clone/NewRepository/assignment2/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/ray/.nuget/NuGet/NuGet.Config"

@@ -1,0 +1,28 @@
+﻿<Properties GitUserInfo="UsingGIT" StartupConfiguration="{77307D1B-95B5-4725-B896-BD25F023EE60}|Default">
+  <MonoDevelop.Ide.ItemProperties.assignment1 PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints />
+  <MonoDevelop.Ide.ItemProperties.assignment2 PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="assignment2/Program.cs">
+    <Files>
+      <File FileName="assignment1/PracticalGrade.cs" Line="1" Column="1" />
+      <File FileName="assignment1/Program.cs" Line="1" Column="1" />
+      <File FileName="assignment1/Course.cs" Line="6" Column="17" />
+      <File FileName="assignment2/Program.cs" Line="70" Column="1" />
+      <File FileName="assignment2/HangmanGame.cs" Line="50" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Programming1.2-Week3">
+            <Node name="assignment2">
+              <Node name="Program.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
